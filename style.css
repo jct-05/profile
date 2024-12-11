@@ -45,19 +45,19 @@ body {
 
 .header-container {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 20px;
-  flex-wrap: nowrap;
+  align-items: flex-start; /* Align items to the top */
+  justify-content: flex-start; /* Align the image and text to the left */
+  gap: 20px; /* Space between the image and text */
+  flex-wrap: nowrap; /* Prevent wrapping until a breakpoint */
 }
 
 /* Section Headings */
 .info {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  flex-grow: 1;
-  max-width: 400px;
+  flex-direction: column; /* Stack heading and list vertically */
+  gap: 10px; /* Space between heading and list */
+  flex-grow: 1; /* Allow the text section to grow */
+  max-width: 400px; /* Prevent the text section from being too wide */
 }
 
 .info h1 {
@@ -66,16 +66,16 @@ body {
   color: #2F4F4F;
   font-size: 24px;
   text-align: center;
-  margin: 0;
+  margin: 0; /* Reset default margin */
   padding: 25px;
   border-radius: 15px;
   margin-bottom: 2px;
 }
 
 .info ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
   background-color: rgba(255, 255, 255, 0.5);
   font-family: "Schoolbell", sans-serif;
   color: #2F4F4F;
@@ -87,10 +87,10 @@ body {
 
 /* Image Styling */
 #profile-pic {
-  height: 265px;
-  width: 265px;
+  height: 265px; /* Fixed height for the image */
+  width: 265px; /* Ensures a square image */
   border-radius: 15px;
-  margin: 0;
+  margin: 0; /* Reset default margin */
 }
 
 /* Navigation Styles */
@@ -244,4 +244,112 @@ footer {
   font-size: 12px;
   font-family: "SpongeBoy", sans-serif;
   border-radius: 20px;
+}
+
+/* Large Smartphones and Small Tablets (480px–767px) */
+@media (max-width: 800px) {
+  .central-container {
+    width: 525px;
+  }
+
+  h1 {
+    height: 150px;
+    padding-top: 30px;
+    font-size: 20px;
+  }
+
+  #profile-pic {
+    height: 220px;
+  }
+
+  nav {
+    font-size: 26px;
+  }
+
+  nav ul {
+    column-gap: 50px;
+  }
+
+  nav ul li a {
+    width: 120px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  p.bio,
+  p.job,
+  p.contact {
+    font-size: 16px;
+  }
+
+  #bio .link {
+    font-size: 22px;
+  }
+
+  .link {
+    font-size: 16px;
+  }
+
+  footer {
+    font-size: 10px;
+  }
+}
+
+/* Small Smartphones (≤ 479px) */
+@media (max-width: 610px) {
+  .central-container {
+    width: 400px;
+  }
+
+  .header-container {
+    gap: 20px;
+  }
+
+  h1 {
+    height: 130px;
+    padding: 10px;
+    padding-top: 20px;
+    font-size: 14px;
+  }
+
+  #profile-pic {
+    height: 160px;
+    margin: 0;
+  }
+
+  nav {
+    font-size: 22px;
+  }
+
+  nav ul {
+    column-gap: 35px;
+  }
+
+  nav ul li a {
+    width: 110px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p.bio,
+  p.job,
+  p.contact {
+    font-size: 14px;
+  }
+
+  #bio .link {
+    font-size: 20px;
+  }
+
+  .link {
+    font-size: 14px;
+  }
+
+  footer {
+    font-size: 9px;
+  }
 }
