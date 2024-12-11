@@ -45,33 +45,52 @@ body {
 
 .header-container {
   display: flex;
-  align-items: center;
-  justify-content: left;
+  align-items: flex-start;
+  justify-content: flex-start;
   gap: 20px;
   flex-wrap: nowrap;
 }
 
 /* Section Headings */
-h1 {
-  height: 185px;
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   flex-grow: 1;
+  max-width: 400px;
+}
+
+.info h1 {
   background-color: rgba(255, 255, 255, 0.5);
   font-family: "Schoolbell", sans-serif;
   color: #2F4F4F;
   font-size: 24px;
   text-align: center;
-  margin: 5px;
-  padding: 30px;
-  padding-bottom: 50px;
+  margin: 0;
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 2px;
+}
+
+.info ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-family: "Schoolbell", sans-serif;
+  color: #2F4F4F;
+  font-size: 20px;
+  text-align: left;
+  padding: 25px;
   border-radius: 15px;
 }
 
 /* Image Styling */
 #profile-pic {
   height: 265px;
+  width: 265px;
   border-radius: 15px;
-  margin: 5px;
-
+  margin: 0;
 }
 
 /* Navigation Styles */
@@ -225,112 +244,4 @@ footer {
   font-size: 12px;
   font-family: "SpongeBoy", sans-serif;
   border-radius: 20px;
-}
-
-/* Large Smartphones and Small Tablets (480px–767px) */
-@media (max-width: 800px) {
-  .central-container {
-    width: 525px;
-  }
-
-  h1 {
-    height: 150px;
-    padding-top: 30px;
-    font-size: 20px;
-  }
-
-  #profile-pic {
-    height: 220px;
-  }
-
-  nav {
-    font-size: 26px;
-  }
-
-  nav ul {
-    column-gap: 50px;
-  }
-
-  nav ul li a {
-    width: 120px;
-  }
-
-  h2 {
-    font-size: 22px;
-  }
-
-  p.bio,
-  p.job,
-  p.contact {
-    font-size: 16px;
-  }
-
-  #bio .link {
-    font-size: 22px;
-  }
-
-  .link {
-    font-size: 16px;
-  }
-
-  footer {
-    font-size: 10px;
-  }
-}
-
-/* Small Smartphones (≤ 479px) */
-@media (max-width: 610px) {
-  .central-container {
-    width: 400px;
-  }
-
-  .header-container {
-    gap: 20px;
-  }
-
-  h1 {
-    height: 130px;
-    padding: 10px;
-    padding-top: 20px;
-    font-size: 14px;
-  }
-
-  #profile-pic {
-    height: 160px;
-    margin: 0;
-  }
-
-  nav {
-    font-size: 22px;
-  }
-
-  nav ul {
-    column-gap: 35px;
-  }
-
-  nav ul li a {
-    width: 110px;
-  }
-
-  h2 {
-    font-size: 20px;
-  }
-
-  p.bio,
-  p.job,
-  p.contact {
-    font-size: 14px;
-  }
-
-  #bio .link {
-    font-size: 20px;
-  }
-
-  .link {
-    font-size: 14px;
-  }
-
-  footer {
-    font-size: 9px;
-  }
 }
